@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #E6E7E8;" stylesheets="@../styles/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionUtilisateurs.SuspensionUtilisateur">
+   <children>
+      <Label alignment="CENTER" prefHeight="50.0" prefWidth="323.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Suspendre un Utilisateurs" textFill="#580be4">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="qui" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="60.0" prefHeight="30.0" prefWidth="300.0" textFill="#264668">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <VBox layoutX="50.0" layoutY="120.0" prefHeight="187.0" prefWidth="300.0" spacing="20.0">
+         <children>
+            <DatePicker fx:id="debutConge" prefHeight="25.0" prefWidth="301.0" promptText="Date début congé" style="-fx-border-color: blue;" />
+            <Label fx:id="dCErreur" prefHeight="30.0" prefWidth="300.0" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="finConge" prefHeight="25.0" prefWidth="303.0" promptText="Date fin congé" style="-fx-border-color: blue;" />
+            <Label fx:id="fCErreur" layoutX="10.0" layoutY="44.0" prefHeight="30.0" prefWidth="300.0" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="30.0" layoutY="320.0" prefHeight="45.0" prefWidth="340.0" spacing="10.0">
+         <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#suspendre" prefHeight="45.0" prefWidth="160.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Suspendre" textFill="#6622cc">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-stop-sign-26.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button defaultButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#annuler" prefHeight="45.0" prefWidth="160.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Annuler   " textFill="#6622cc">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-cancel-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

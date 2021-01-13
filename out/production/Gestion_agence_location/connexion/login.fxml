@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #E6E7E8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="connexion.Connexion">
+    <children>
+        <ImageView id="image" fitHeight="160.0" fitWidth="160.0" layoutX="120.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/79f59fdf-67d0-487c-8bd5-b3d6ef7be502_200x200.png" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" layoutX="95.0" layoutY="160.0" prefHeight="50.0" prefWidth="210.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" stylesheets="@../styles/styles.css" text="Connexion">
+            <font>
+                <Font name="Arial Bold" size="36.0" />
+            </font>
+            <textFill>
+                <RadialGradient centerX="0.5388888888888889" centerY="0.5" radius="0.5">
+                    <stops>
+                        <Stop color="#580be4" />
+                        <Stop color="#580be4" offset="0.007662835249042145" />
+                        <Stop color="#570970" offset="1.0" />
+                    </stops>
+                </RadialGradient>
+            </textFill>
+        </Label>
+        <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="389.0" prefHeight="50.0" prefWidth="390.0" textAlignment="CENTER" textFill="#ee0303">
+            <font>
+                <Font name="Arial Bold" size="14.0" />
+            </font>
+        </Label>
+        <Button id="loginButton" fx:id="loginButton" layoutX="115.0" layoutY="450.0" mnemonicParsing="false" onAction="#seConnecter" prefHeight="50.0" prefWidth="170.0" style="-fx-border-radius: 50;" stylesheets="@../styles/styles.css" text="Connecter">
+            <font>
+                <Font name="Arial Bold" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <HBox layoutX="50.0" layoutY="250.0" prefHeight="40.0" prefWidth="300.0">
+            <children>
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/icons8-user-64.png" />
+                    </image>
+                </ImageView>
+                <TextField fx:id="nomUtilisateur" prefHeight="30.0" prefWidth="260.0" promptText="utilisateur" stylesheets="@../styles/styles.css">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets top="5.0" />
+                    </HBox.margin>
+                </TextField>
+            </children>
+        </HBox>
+        <HBox layoutX="50.0" layoutY="340.0" prefHeight="40.0" prefWidth="300.0">
+            <children>
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/lockIcon.png" />
+                    </image>
+                    <effect>
+                        <ColorAdjust />
+                    </effect>
+                </ImageView>
+                <PasswordField fx:id="motDePasse" prefHeight="30.0" prefWidth="262.0" promptText="mot de passe" stylesheets="@../styles/styles.css">
+                    <HBox.margin>
+                        <Insets top="5.0" />
+                    </HBox.margin>
+                    <opaqueInsets>
+                        <Insets top="5.0" />
+                    </opaqueInsets>
+                </PasswordField>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

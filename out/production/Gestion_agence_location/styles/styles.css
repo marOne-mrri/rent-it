@@ -1,0 +1,67 @@
+#loginButton:hover {
+    -fx-background-color: #580BE4;
+}
+
+#loginButton {
+    -fx-background-color:
+                #43545e,
+                linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+                linear-gradient(#20262b, #191d22),
+                radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 20px;
+    -fx-padding: 10 20 10 20;
+}
+
+#nomUtilisateur, #motDePasse {
+    -fx-font-family: "Arial";
+    -fx-font-size: 20;
+    -fx-padding: 1,1,1,1;
+    -fx-border-color: #580BE4;
+    -fx-border-width: 2;
+    -fx-border-radius: 1;
+    -fx-border: gone;
+    -fx-background-color: transparent;
+}
+
+#nomUtilisateur:focused, #motDePasse:focused {
+    -fx-text-fill: white;
+    -fx-background-color: #580BE4;
+}
+
+#login {
+    -fx-text-fill: linear-gradient(#cd525b, #460000);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.buttons:hover {
+    -fx-text-fill: black;
+    -fx-background-color: #7EB3FF;
+}
+
+.buttons:focused, .buttons:active {
+    -fx-text-fill: black;
+    -fx-background-color: blue;
+}
+
+.buttons {
+    -fx-background-color: #580BE4;
+}
+
+.buttonToQuit:hover {
+    -fx-background-color: #580BE4;
+    -fx-text-fill: black;
+}
+
+.buttonToQuit {
+    -fx-background-color:  #43545e;
+}
+
+.upload-button:hover {
+    -fx-border-style: dotted;
+}

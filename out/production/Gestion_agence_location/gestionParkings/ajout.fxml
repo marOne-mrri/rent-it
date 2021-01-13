@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" stylesheets="@../styles/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionParkings.AjoutParking">
+   <children>
+      <Label layoutX="16.0" layoutY="8.0" prefHeight="50.0" prefWidth="300.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Ajouter un Parking" textFill="#580be4">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" layoutX="50.0" layoutY="65.0" prefHeight="200.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <JFXTextField fx:id="rue" focusColor="LIME" labelFloat="true" prefHeight="25.0" prefWidth="300.0" promptText="Rue" unFocusColor="#6622cc">
+               <font>
+                  <Font name="Arial Italic" size="20.0" />
+               </font>
+            </JFXTextField>
+            <Label fx:id="rErreur" prefHeight="27.0" prefWidth="194.0" textFill="RED">
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <JFXTextField fx:id="capacite" focusColor="LIME" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="300.0" promptText="Capacité" unFocusColor="#6622cc">
+               <font>
+                  <Font name="Arial Italic" size="20.0" />
+               </font>
+            </JFXTextField>
+            <Label fx:id="cErreur" prefHeight="27.0" prefWidth="231.0" textFill="RED">
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <HBox layoutX="50.0" layoutY="300.0" prefHeight="45.0" prefWidth="300.0" spacing="20.0">
+         <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#ajouter" prefHeight="40.0" prefWidth="140.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Ajouter " textFill="#6622cc">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-plus-32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button defaultButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#annuler" prefHeight="40.0" prefWidth="140.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Annuler   " textFill="#6622cc">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-cancel-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

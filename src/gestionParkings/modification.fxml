@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #E6E7E8;" stylesheets="@../styles/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionParkings.ModificationParking">
+   <children>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="300.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Modifier Un Parking" textFill="#580be4">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" layoutX="50.0" layoutY="90.0" prefHeight="188.0" prefWidth="300.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="rue" focusColor="LIME" labelFloat="true" layoutX="10.0" layoutY="60.0" prefWidth="145.0" promptText="Rue" unFocusColor="#6622cc">
+               <font>
+                  <Font name="Arial Italic" size="20.0" />
+               </font>
+            </JFXTextField>
+            <Label fx:id="rErreur" prefHeight="30.0" prefWidth="300.0" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="capacite" focusColor="LIME" labelFloat="true" prefWidth="145.0" promptText="Capacité" unFocusColor="#6622cc">
+               <font>
+                  <Font name="Arial Italic" size="20.0" />
+               </font>
+            </JFXTextField>
+            <Label fx:id="cErreur" layoutX="10.0" layoutY="44.0" prefHeight="30.0" prefWidth="300.0" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="50.0" layoutY="280.0" prefHeight="30.0" prefWidth="300.0" textFill="RED">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="30.0" layoutY="340.0" prefHeight="45.0" prefWidth="340.0" spacing="10.0">
+         <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#modifier" prefHeight="45.0" prefWidth="160.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Modifier" textFill="#6622cc">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-edit-32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button defaultButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#annuler" prefHeight="45.0" prefWidth="160.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Annuler   " textFill="#6622cc">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-cancel-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #E6E7E8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.MainController">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="1110.0" style="-fx-background-color: #E6E7E8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="355.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="355.0" AnchorPane.rightAnchor="355.0" AnchorPane.topAnchor="150.0">
+               <image>
+                  <Image url="@../images/79f59fdf-67d0-487c-8bd5-b3d6ef7be502_200x200.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="afterLoginLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="10.0" prefHeight="130.0" prefWidth="650.0" textFill="#580be4" AnchorPane.bottomAnchor="560.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Arial Bold" size="40.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="50.0" prefWidth="200.0" text="Acceuil" textFill="#580be4" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXHamburger fx:id="hamburger" layoutX="1110.0" prefHeight="90.0" prefWidth="90.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXHamburger>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="240.0" minHeight="700.0" overLayVisible="false" prefWidth="1.0" resizableOnDrag="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <JFXDrawer fx:id="quitDrawer" defaultDrawerSize="500.0" direction="RIGHT" layoutX="940.0" layoutY="90.0" prefHeight="105.0" prefWidth="1.0" style="-fx-background-color: #E6E7E8;" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="90.0" />
+      <Button fx:id="threeDotsMenu" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="1110.0" layoutY="90.0" minHeight="90.0" mnemonicParsing="false" prefWidth="90.0" style="-fx-background-color: #E6E7E8;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-menu-vertical-30.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="1107.0" orientation="VERTICAL" prefHeight="700.0" prefWidth="5.0" style="-fx-background-color: #7EB3FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="0.0" />
+      <Pane prefHeight="90.0" prefWidth="87.0" style="-fx-background-color: #E6E7E8;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0" />
+   </children>
+</AnchorPane>

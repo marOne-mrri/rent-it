@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="660.0" prefWidth="400.0" style="-fx-background-color: #E6E7E8;" stylesheets="@../styles/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionUtilisateurs.ModificationUtilisateur">
+   <children>
+      <Label alignment="CENTER" layoutX="5.0" layoutY="5.0" prefHeight="50.0" prefWidth="300.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Modifier un Utilisateurs" textFill="#580be4">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="50.0" text="Les champs marqués par ** sont obligatoires !" textFill="#e43f3f" />
+      <VBox layoutX="50.0" layoutY="80.0" prefHeight="319.0" prefWidth="300.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="nouveauNomUtilisateur" focusColor="LIME" labelFloat="true" prefHeight="25.0" prefWidth="300.0" promptText="Nom d'Utilisateur**" unFocusColor="#6622cc">
+               <font>
+                  <Font name="Arial Italic" size="20.0" />
+               </font>
+            </JFXTextField>
+            <Label fx:id="nUErreur" prefHeight="30.0" prefWidth="300.0" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="42.0" prefWidth="300.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="nouveauNom" focusColor="LIME" labelFloat="true" prefWidth="145.0" promptText="Nom**" unFocusColor="#6622cc">
+                     <font>
+                        <Font name="Arial Italic" size="20.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="nouveauPrenom" focusColor="LIME" labelFloat="true" layoutX="10.0" layoutY="10.0" prefWidth="145.0" promptText="Prenom**" unFocusColor="#6622cc">
+                     <font>
+                        <Font name="Arial Italic" size="20.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="122.0" prefHeight="42.0" prefWidth="300.0" spacing="20.0">
+               <children>
+                  <Label fx:id="nErreur" prefWidth="150.0" textFill="RED" />
+                  <Label fx:id="pErreur" prefWidth="150.0" textFill="RED" />
+               </children>
+            </HBox>
+            <JFXTextField fx:id="nouveauMail" focusColor="LIME" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="300.0" promptText="E-mail" unFocusColor="#6622cc">
+               <font>
+                  <Font name="Arial Italic" size="20.0" />
+               </font>
+            </JFXTextField>
+            <Label fx:id="mErreur" prefHeight="30.0" prefWidth="300.0" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="nouveauGsm" focusColor="LIME" labelFloat="true" layoutX="10.0" layoutY="156.0" prefHeight="25.0" prefWidth="300.0" promptText="GSM" unFocusColor="#6622cc">
+               <font>
+                  <Font name="Arial Italic" size="20.0" />
+               </font>
+            </JFXTextField>
+            <Label fx:id="gErreur" prefHeight="30.0" prefWidth="300.0" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="36.0" prefWidth="300.0" spacing="5.0">
+               <children>
+                  <DatePicker fx:id="nouveauDebutConge" promptText="Début du Congé" style="-fx-border-color: blue;" />
+                  <DatePicker fx:id="nouveauFinConge" promptText="Fin du Congé" style="-fx-border-color: blue;" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="144.0" prefHeight="42.0" prefWidth="300.0" spacing="20.0">
+               <children>
+                  <Label fx:id="dCErreur" prefWidth="150.0" textFill="RED" />
+                  <Label fx:id="fCErreur" prefWidth="150.0" textFill="RED" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="sqlErreur" layoutX="50.0" layoutY="552.0" prefHeight="30.0" prefWidth="300.0" textFill="RED">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <HBox layoutX="50.0" layoutY="600.0" prefHeight="45.0" prefWidth="300.0" spacing="20.0">
+         <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#enregistrerModification" prefHeight="40.0" prefWidth="140.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Modifier " textFill="#6622cc">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-edit-32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button defaultButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#annuler" prefHeight="40.0" prefWidth="140.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Annuler   " textFill="#6622cc">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-cancel-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
