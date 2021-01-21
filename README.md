@@ -8,3 +8,4 @@ Rent it is a management application of rental agencies rent vehicles what it doe
 ✅manage sanctions 
 ✅manage vehicles 
 ✅manage parkings
+![Image of Yaktocat](https://github.com/MarOne-Mrri/rent-it/blob/main/src/images/icon.png)
